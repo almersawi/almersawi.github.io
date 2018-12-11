@@ -1,0 +1,147 @@
+body{
+  background: #eeeeee6b;
+}
+.title{
+  color: #1973d4;
+}
+.sub-title{
+  color: #1973d4;
+  padding-left: 8px;
+  border-left: 3px solid #7f7c9a;
+}
+label{
+  color: #9b989e;
+}
+
+.container{
+  		margin-top: 20px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      border: solid 1px #3333331f;
+      box-shadow: 2px 4px 8px #33333314;
+      position: absolute;
+      top: 20px;
+      transition: all 300ms ease;
+      right: 110px;
+  	}
+  	h2 {
+  		text-align: center;
+  	}
+  	#calc, #Stand-Calc {
+  		margin-left: 50%;
+  		transform: translateX(-50%);
+      margin-top: 20px;
+  	}
+    #valueBtn {
+      display: none;
+      margin-bottom: 20px;
+    }
+    #value-interval{
+      display: none;
+    }
+    #results{
+      margin: 20px 0 20px 0;
+    }
+    #myDiv{
+      width: 100%;
+    }
+    .scrolled {
+      position: fixed;
+      top: 0px;
+    }
+    #copyright{
+      position: fixed;
+      bottom: 1px;
+      right: 20px;
+      color: #c7c7c7;
+    }
+
+    #copyright2{
+      position: fixed;
+      bottom: 1px;
+      left: 20px;
+      color: #c7c7c7;
+    }
+
+    h1{
+      color: #333;
+    }
+
+    #stable-area {
+      display: none;
+    }
+
+    #secondFE-Container {
+      display: none;
+    }
+
+    * {
+      padding: 0;
+      margin:0;
+    }
+
+#sidebar {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  background-image: linear-gradient(to right top, #648cc8, #8a9ecd, #a9b1d2, #c3c5d7, #dbdbdc);
+  box-shadow: 2px 3px 8px #eee;
+  top: 0;
+  left: -300px;
+  transition: all 300ms ease;
+  z-index: 1000;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+#sidebar ul li {
+  list-style: none;
+  color: #fff;
+  transition: all ease 300ms;
+  padding: 20px 24px;
+}
+
+#sidebar ul li:hover   {
+  background: #fff;
+}
+
+#sidebar ul li a{
+  color: #fff;
+  display: block;
+  padding: 20px;
+  font-size: 1.2em;
+  transition: all 300ms ease;
+}
+
+
+#sidebar ul li:hover a{
+  text-decoration:none;
+  color: #417AD3;
+}
+
+
+#sidebar .toggle-btn {
+  position: absolute;
+  top: 30px;
+  left: 330px;
+  cursor: pointer;
+}
+
+.toggle-btn span {
+  width: 45px;
+  height: 4px;
+  background: #417AD3;
+  display: block;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.activec {
+right: -190px;
+}
+body {
+  overflow-x: hidden;
+}
