@@ -1,0 +1,57 @@
+body{
+  background: #fff;
+}
+
+#copyright{
+  position: fixed;
+  bottom: 1px;
+  right: 20px;
+  color: #c7c7c7;
+}
+
+.container {
+    margin-top: 50px;
+	padding-bottom: 100px;
+}
+
+#add-item {
+    float: right;
+}
+
+.form-control {
+	border:none;
+	text-align: center;
+}
+
+#next {
+	float: left;
+	display: none;
+}
+
+#depreciation-container {
+	display: none;
+}
+
+#plot-ncf {
+	display: none;
+	float: left;
+	
+}
+
+#plot-npv {
+	float: right;
+	display: none;
+	
+}
+
+#plot-aria1 {
+	padding-top: 60px;
+}
+
+#plot-area2 {
+	padding-top: 60px;
+}
+
+#dcf-calc{
+	display: none;
+}
