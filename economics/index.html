@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Plotly.js -->
+  <script src="ploty.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="icon" href="fav.ico">
+ <title>Programming Economic Modeling Software</title>
+
+</head>
+<body>
+ 
+ 
+  <div class="container">
+      <table class="table table-bordered" id="first-table">
+  <thead>
+    <tr>
+      <th scope="col">Year</th>
+      <th scope="col">Investment (M$)</th>
+      <th scope="col">Revenue (M$)</th>
+      <th scope="col">Operating Cost (M$)</th>
+    </tr>
+  </thead>
+  <tbody id="tbody">
+  </tbody>
+</table>
+        <button id="add-item" class="btn btn-primary">Add Row</button>
+	    <button id="next" class="btn btn-primary">Next</button>
+	  
+	  <br><br>
+	  
+	  <div id="depreciation-container">
+		  <hr>
+	  
+	    <h4>Depreciation Calculations</h4><br>
+		  <div class="row">
+			  <table class="table table-bordered">
+				  <thead>
+				  	<tr>
+						<th>Purchase Price</th>
+						<th>Salvage Value</th>
+						<th>Estimated Useful Life</th>
+					</tr>
+				  </thead>
+				  <tbody>
+				  	<tr>
+						<td><input type="number" id="purchase-price" class="form-control" placeholder="Type value in M$ here"></td>
+						<td><input type="number" id="slavage-value" class="form-control" placeholder="Type value in M$ here"></td>
+						<td><input type="number" id="estimated-life" class="form-control" placeholder="Type value in years here"></td>
+					</tr>
+				  </tbody>
+			  </table>
+			  <h4>Tax Rate:</h4> 
+			  <div class="col-md-4"><input type="number" class="form-control" id="tax-rate" placeholder="Type Tax Rate here in % Ex: (47)"></div>
+			  
+			  <h4>Interest Rate:</h4> 
+			  <div class="col-md-4"><input type="number" class="form-control" id="interest-rate" placeholder="Type Interest Rate here in % Ex: (10.6)"></div>
+			  <button id="clac" class="btn btn-primary">Create full table</button>
+		  </div> <!-- end row -->
+	  </div>
+	  <br>
+	  <div id="new-table-area">
+	  
+	  </div>
+	  <button id="plot-ncf" class="btn btn-danger">Plot NCF</button>
+	  
+	  <div class="row">
+	  <div class="col-md-6" id="plot-aria1" style="min-height: 400px;">
+		  
+   	  </div><!-- end col 1 -->
+      <div class="col-md-6" id="plot-area2" style="min-height: 400px;">
+		  
+   	  </div> <!-- end col 2 -->
+		  <div class="col-md-6" id="dcf-calc">
+			  <h4>DCFROR Calculations</h4>
+			  <hr>
+			  <label>Initial Rate:</label>
+			  <input type="number" placeholder="Type Initial Rate here.." class="form-control" id="initial-rate"> <br>
+			  <label>Increment:</label>
+			  <input type="number" placeholder="Type Increment here .." class='form-control' id='increment'> <br>
+			  <label>Points:</label>
+			  <input type="number" placeholder="Type No. of Points here .." class='form-control' id='points'> <br>
+			  <button class="btn btn-danger" id="DCFROR-btn">Create DCFROR Table & Plot</button>
+		  </div>
+		  <div class="col-md-6">
+			  
+		  </div>
+	  </div> <!-- end row -->
+  </div>
+    
+    
+<script type="text/javascript" src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
