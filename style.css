@@ -225,3 +225,19 @@ margin: 5px;
   margin-top: 10px;
 }
 
+@media only screen and (max-width: 1200px) {
+
+  #linkedin {
+    display: none;
+  }
+
+  #main-content {
+    position: absolute;
+    max-width: 900px;
+    margin:50px auto;
+
+  }
+  .brand a {
+    display: none;
+  }
+}
