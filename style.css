@@ -67,6 +67,7 @@ body{
     * {
       padding: 0;
       margin:0;
+      box-sizing: border-box;
     }
 
 #sidebar {
@@ -224,7 +225,3 @@ margin: 5px;
   margin-top: 10px;
 }
 
-
-* {
-  box-sizing: border-box;
-}
