@@ -241,3 +241,25 @@ margin: 5px;
     display: none;
   }
 }
+
+@media only screen and (max-width: 700px) {
+
+  #sidebar{
+    display: none;
+  }
+  body {
+    background-color: #444;
+  }
+
+  #linkedin {
+    display: none;
+  }
+
+  .container {
+    width: 90%;
+    margin:auto;
+    position: relative;
+    right: 0;
+  }
+  .brand a {
+ 
