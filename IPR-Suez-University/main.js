@@ -1,6 +1,6 @@
  function round(value,decimals) {
       return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
-    }
+  }
   var myBtn = document.getElementById('calc'),
       zt = [],
       nt = [],
@@ -11,21 +11,27 @@
       valueInterval = document.getElementById('value-interval'),
       myDiv = document.getElementById('myDiv');
   myBtn.onclick= function() {
-    var z = [],
+      var z = [],
       n = [],
       Pr = document.getElementById('Pr').value,
       Pb = document.getElementById('Pb').value,
+      Pr = parseFloat(Pr);
+      Pb = parseFloat(Pb);
       qTest = document.getElementById('qTest').value,
       pTest = document.getElementById('pTest').value,
-      Pwf,
       results = document.getElementById('results');
+      Pr = parseFloat(Pr);
+      Pb = parseFloat(Pb);
+      var Pwf;
     if (Pr == '' || qTest == '' || pTest == '') {
       alert('Please insert your values');
     }
     else {
        if (Pr < Pb) {
+         console.log('pr',Pr);
+         console.log('Pb',Pb);
+         console.log('Pr < Pb');
         var Qmax = (qTest) / (1 - (0.2*(pTest/Pr)) - (0.8*((pTest*pTest)/(Pr*Pr))));
-
       results.innerHTML = 'q'+'<sub>'+'max'+'</sub>'+' = ' + round(Qmax,2) + " STB/Day";
 
   for (Pwf = 0 ; Pwf <= Pr ; Pwf = Pwf + 0.1){
@@ -81,11 +87,12 @@ console.log(parseInt(valueInterval2.value));
           subtr.appendChild(subtd2);
           tbody.appendChild(subtr);
         }
-       
+
           table.appendChild(thead);
           table.appendChild(tbody);
 
     }
+
 else {
   table.removeChild(table.childNodes[1]);
   table.removeChild(table.childNodes[1]);
@@ -93,9 +100,7 @@ else {
   zt =[];
   nt=[];
   valueBtn.click();
-} 
-
-
+    }
 
   }
 var trace2 = {
@@ -126,6 +131,8 @@ Plotly.newPlot('myDiv', data, layout);
            qArray=[];
        if(pTest > Pb) {
         var j = qTest / (Pr-pTest);
+         console.log(j);
+         console.log('pTest > Pb');
         for (m=0;m<Pb;m = m+0.1){
           pArray.push(m);
           qArray.push(j*(Pr-Pb) + ((j*Pb)/1.8)*(1-(0.2*(m/Pb))-(0.8*(m*m)/(Pb*Pb))));
@@ -137,7 +144,7 @@ Plotly.newPlot('myDiv', data, layout);
         // Create table value here
   valueBtn.style.display = 'block';
   valueInterval.style.display = 'block';
-   results.innerHTML = 'J = ' + round(j,2) + " STB/day.psi" + '<br>' + 'q' + '<sub>' +'max'+'</sub>' +' = ' +round(qArray[0],2) + ' STB/day';
+   results.innerHTML = 'J = ' + round(j,3) + " STB/day.psi" + '<br>' + 'q' + '<sub>' +'max'+'</sub>' +' = ' +round(qArray[0],2) + ' STB/day';
   valueBtn.onclick = function() {
 var valueInterval2 = document.getElementById('value-interval');
 console.log(parseInt(valueInterval2.value));
@@ -162,8 +169,8 @@ console.log(parseInt(valueInterval2.value));
 
   // zt = zt.concat(zx);
   // nt = nt.concat(nx);
-  
-    
+
+
     var thead = document.createElement('thead'),
         tr = document.createElement('tr'),
         th1 = document.createElement('th'),
@@ -199,11 +206,12 @@ console.log(parseInt(valueInterval2.value));
           subtr.appendChild(subtd2);
           tbody.appendChild(subtr);
         }
-       
+
           table.appendChild(thead);
           table.appendChild(tbody);
 
     }
+
 else {
   table.removeChild(table.childNodes[1]);
   table.removeChild(table.childNodes[1]);
@@ -213,10 +221,7 @@ else {
   zx =[];
   nx=[];
   valueBtn.click();
-} 
-
-
-
+}
   }
 
         var trace3 = {
@@ -239,7 +244,7 @@ var layout = {
 };
 
 Plotly.newPlot('myDiv', data, layout);
-  
+
        }
        else {
         // For Undersaturated Reservoirs
@@ -258,8 +263,8 @@ Plotly.newPlot('myDiv', data, layout);
   valueInterval.style.display = 'block';
    results.innerHTML = 'J = ' + round(j,2) + " STB/day.psi" + '<br>' + 'q' + '<sub>' +'max'+'</sub>' +' = ' +round(qArray[0],2) + ' STB/day';
   valueBtn.onclick = function() {
-var valueInterval2 = document.getElementById('value-interval');
-console.log(parseInt(valueInterval2.value));
+  var valueInterval2 = document.getElementById('value-interval');
+  console.log(parseInt(valueInterval2.value));
     if (table.childElementCount == 0) {
       var i = 0;
       for (i; i<=Pb; i=i+parseInt(valueInterval2.value)) {
@@ -281,8 +286,8 @@ console.log(parseInt(valueInterval2.value));
 
   // zt = zt.concat(zx);
   // nt = nt.concat(nx);
-  
-    
+
+
     var thead = document.createElement('thead'),
         tr = document.createElement('tr'),
         th1 = document.createElement('th'),
@@ -318,11 +323,10 @@ console.log(parseInt(valueInterval2.value));
           subtr.appendChild(subtd2);
           tbody.appendChild(subtr);
         }
-       
           table.appendChild(thead);
           table.appendChild(tbody);
-
     }
+
 else {
   table.removeChild(table.childNodes[1]);
   table.removeChild(table.childNodes[1]);
@@ -332,9 +336,7 @@ else {
   zx =[];
   nx=[];
   valueBtn.click();
-} 
-
-
+}
 
   }
 
@@ -359,10 +361,10 @@ var layout = {
 
 Plotly.newPlot('myDiv', data, layout);
 
-} 
+}
  }
   }
-   } 
+   }
 
     // scroll effect
 
@@ -375,6 +377,4 @@ Plotly.newPlot('myDiv', data, layout);
        myDiv.classList.remove('scrolled');
       }
       console.log(scrollValue);
-    } 
-
-   
+    }
